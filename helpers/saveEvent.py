@@ -5,7 +5,8 @@ def save_event():
 	eventName = raw_input("Enter the event name: ")
 	start_date = raw_input("Enter the event date in this format <April> <23rd>: ")
 	end_date = raw_input("Enter the event end date in this format <April> <23rd>: ")
-	time = raw_input("Enter the event time in this format <4:00 PM>: ")
+	start_time = raw_input("Enter the event time in this format <4:00 PM>: ")
+	end_time = raw_input("Enter the event end time in this format <4:00 PM>: ")
 	price = raw_input("Enter the event price in this format <$3.22>: ")
 	location = raw_input("Enter the location: ")
 	synopsis = raw_input("Enter the description: ")
@@ -15,9 +16,10 @@ def save_event():
 	events = db['activities']
 
 	event = {'Event_Name' : eventName,
-			'start_Date' : start_date,
+			'start_date' : start_date,
 			'end_date' : end_date,
-			'Time' : time,
+			'start_time' : start_time,
+			'end_time' : end_time,
 			'Price' : price,
 			'Location' : location,
 			'Synopsis' : synopsis
@@ -27,9 +29,10 @@ def save_event():
 
 
 	print event['Event_Name']
-	print event['Start Date']
-	print event['End Date']
-	print event['Time']
+	print event['start_date']
+	print event['end_date']
+	print event['start_time']
+	print event['end_time']
 	print event['Price']
 	print event['Synopsis']
 
