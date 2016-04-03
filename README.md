@@ -1,5 +1,11 @@
 Our program for HackNY2016. 
 
-It will grab your current location and recommend you some fun events, or query the FourSquare API for good places to dine.
+Our program will suggest a random event from our personal recommendations and present
+it to the user as a 'Mission'. 
 
-If you haven't used github before, select SSH next to the "Find File" button and type in git clone <copy and paste the SSH key here>.
+If that isn't interesting for the user, they will also be able to check out fun things to do nearby using the Foursquare API. 
+
+If that still isn't interesting enough for the user, they can perform a Foursquare search directly from our app using the API.
+
+So the goal of this app is an amazing integrated hub for anyone that is looking
+for fun things to do in the Big Apple!
