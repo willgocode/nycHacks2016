@@ -3,7 +3,8 @@ from pymongo import MongoClient
 
 def save_event():
 	eventName = raw_input("Enter the event name: ")
-	date = raw_input("Enter the event date in this format <April> <23>: ")
+	start_date = raw_input("Enter the event date in this format <April> <23rd>: ")
+	end_date = raw_input("Enter the event end date in this format <April> <23rd>: ")
 	time = raw_input("Enter the event time in this format <4:00 PM>: ")
 	price = raw_input("Enter the event price in this format <$3.22>: ")
 	location = raw_input("Enter the location: ")
@@ -14,7 +15,8 @@ def save_event():
 	events = db['activities']
 
 	event = {'Event_Name' : eventName,
-			'Date' : date,
+			'start_Date' : start_date,
+			'end_date' : end_date,
 			'Time' : time,
 			'Price' : price,
 			'Location' : location,
@@ -25,7 +27,8 @@ def save_event():
 
 
 	print event['Event_Name']
-	print event['Date']
+	print event['Start Date']
+	print event['End Date']
 	print event['Time']
 	print event['Price']
 	print event['Synopsis']
