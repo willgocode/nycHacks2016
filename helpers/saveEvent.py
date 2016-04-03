@@ -6,8 +6,8 @@ def save_event():
 	date = raw_input("Enter the event date in this format <April> <23>: ")
 	time = raw_input("Enter the event time in this format <4:00 PM>: ")
 	price = raw_input("Enter the event price in this format <$3.22>: ")
+	location = raw_input("Enter the location: ")
 	synopsis = raw_input("Enter the description: ")
-
 	client = MongoClient('localhost', 27017)
 	db = client['activegen']
 
@@ -17,6 +17,7 @@ def save_event():
 			'Date' : date,
 			'Time' : time,
 			'Price' : price,
+			'Location' : location,
 			'Synopsis' : synopsis
 			}
 
